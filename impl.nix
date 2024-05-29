@@ -3,7 +3,7 @@
 let
   hardware_deps = with pkgs;
     if variant == "CUDA" then [
-      cudatoolkit
+      # cudatoolkit - add to system globally https://github.com/virchau13/automatic1111-webui-nix/issues/6#issuecomment-2068271977
       linuxPackages.nvidia_x11
       xorg.libXi
       xorg.libXmu
