@@ -12,8 +12,9 @@ First, run:
 git clone https://github.com/virchau13/automatic1111-webui-nix
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui
 cp automatic1111-webui-nix/*.nix stable-diffusion-webui/
+cp automatic1111-webui-nix/.envrc stable-diffusion-webui/
 cd stable-diffusion-webui
-git add *.nix
+git add *.nix .envrc
 ```
 
 After that, choose the command according to your platform:
