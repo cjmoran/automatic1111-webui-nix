@@ -39,11 +39,22 @@ nix-shell --argstr variant ROCM # ROCm
 
 ```bash
 cd automatic1111-webui-nix
-./webui.sh
+./webui.sh --xformers
 # follow the tutorials at the original project for setting up Stable Diffusion / GFPGAN / whatever
 ```
 
 You might want to switch to high performance mode on battery-powered devices.
+
+#### Troubleshooting
+
+Run ./webui.sh --xformers to set up xformers. If this command fails, try git pulling from the source repository, then deleting the venv (rm -r venv) and reinstalling everything from scratch again (sometimes the venv will keep old packages around forever even if they should be updated.)
+
+Maybe need to reinstall xformers with its own CUDA kernel via:
+
+```
+source venv/bin/activate
+pip3 install -U xformers --index-url https://download.pytorch.org/whl/cu121
+```
 
 ## Is this completely pure?
 

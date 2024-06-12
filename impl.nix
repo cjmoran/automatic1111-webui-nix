@@ -14,6 +14,10 @@ let
       xorg.libXrandr
       zlib
 
+      # for auto tag completion extension (torchvision)
+      libjpeg
+      libpng
+
       # for xformers
       gcc
     ] else if variant == "ROCM" then [
