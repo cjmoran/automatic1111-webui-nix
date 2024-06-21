@@ -56,6 +56,18 @@ source venv/bin/activate
 pip3 install -U xformers --index-url https://download.pytorch.org/whl/cu121
 ```
 
+Another method (didn't work but maybe did it wrong) from https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Xformers#building-xformers-on-linux-from-anonymous-user
+
+    1. go to the webui directory
+    2. source ./venv/bin/activate
+    3. cd repositories
+    4. git clone https://github.com/facebookresearch/xformers.git
+    5. cd xformers
+    6. git submodule update --init --recursive
+    7. pip install -r requirements.txt
+    8. pip install -e .
+
+
 ## Is this completely pure?
 
 This is just a Nix shell for bootstrapping the web UI, not an actual pure flake; the `./webui.sh` will still install
